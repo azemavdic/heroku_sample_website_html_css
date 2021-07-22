@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+:root {
+    --primary-color: #0478ed;
+    --secondary-color: #1c3fa8;
+    --dark-color: #002240;
+    --light-color: #f4f4f4;
+    --transparent-bg-color: #0478edc2;
+    --success-color: #5cb85c;
+    --error-color: #d9534f;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.8rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+h1,
+h2 {
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 1rem, 0;
+}
+
+p {
+    margin: 1rem, 0;
+}
+
+img {
+    width: 100%;
+}
+
+code,
+pre {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+/* NAVBAR STYLES */
+
+.navbar {
+    background-color: var(--primary-color);
+    color: #fff;
+    height: 7rem;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar a {
+    color: #fff;
+    padding: 1rem;
+    margin: 0 0.5rem;
+    transition: all 150ms;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid #fff;
+}
+
+.navbar .flex {
+    justify-content: space-between;
+}
+
+/* SHOWCASE */
+
+.showcase {
+    background-color: var(--primary-color);
+    height: 40rem;
+    color: #fff;
+    position: relative;
+}
+
+.showcase h1 {
+    font-size: 4rem;
+}
+
+.showcase p {
+    margin: 2rem 0;
+}
+
+.showcase .grid {
+    grid-template-columns: 55% 45%;
+    gap: 3rem;
+}
+
+.showcase-text {
+    animation: slideInFromLeft 1s ease-in;
+}
+
+.showcase-form {
+    position: relative;
+    top: 6rem;
+    height: 35rem;
+    max-width: 40rem;
+    border: none;
+    padding: 4rem;
+    justify-self: flex-end;
+    z-index: 100;
+    animation: slideInFromRight 1s ease-in;
+}
+
+.showcase-form .form-control {
+    margin: 3rem 0;
+}
+
+.showcase-form input[type='text'],
+.showcase-form input[type='email'] {
+    border: 0;
+    border-bottom: 1px solid #333;
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 3px;
+}
+
+.showcase-form input:focus {
+    outline: none;
+}
+
+.showcase::before,
+.showcase::after {
+    content: '';
+    position: absolute;
+    bottom: -5rem;
+    right: 0;
+    left: 0;
+    height: 10rem;
+    background-color: #fff;
+    transform: skewY(-3deg);
+}
+
+/* STATS */
+
+.stats {
+    padding-top: 10rem;
+    animation: slideInFromBottom 1s ease-in;
+}
+
+.stats-heading {
+    max-width: 50rem;
+    margin: auto;
+}
+
+.stats .grid h3 {
+    font-size: 3.6rem;
+}
+
+.stats .grid p {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* CLI */
+
+.cli .grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.cli .grid > *:first-child {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+}
+
+/* CLOUD */
+
+.cloud .grid {
+    grid-template-columns: 4fr 3fr;
+}
+
+/* LANGUAGES */
+
+.languages .card {
+    margin: 1.8rem, 1rem, 4rem;
+    transition: all 300ms;
+}
+
+.languages .card:hover {
+    transform: translateY(-1.5rem);
+}
+
+.languages .flex {
+    flex-wrap: wrap;
+}
+
+.languages .card h4 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.languages .container {
+    max-width: 150rem;
+}
+
+/* FOOTER */
+
+.social a {
+    padding: 1rem;
+    margin: 1rem;
+    transition: 300ms;
+}
+
+.footer a:hover {
+    color: rgba(0, 0, 0, 0.95);
+}
+
+/* FEATURES */
+
+/* .features h1 {
+    font-size: 5.5rem;
+} */
+
+.features img {
+    width: 20rem;
+    justify-self: flex-end;
+}
+
+.features-subhead img {
+    width: 30rem;
+    justify-self: flex-end;
+}
+
+/* FEATURES MAIN */
+
+.features-main .card i {
+    margin-right: 2rem;
+}
+
+.features-main .grid {
+    padding: 3rem;
+}
+
+.features-main .grid > *:first-child {
+    grid-column: 1 / span 3;
+}
+.features-main .grid > *:nth-child(2) {
+    grid-column: 1 / span 2;
+}
+
+/* DOCUMENTATION PAGE */
+
+.docs-header img {
+    width: 20rem;
+    justify-self: flex-end;
+}
+
+.docs-main .card h3 {
+    margin: 2rem 0;
+}
+
+.docs-main .grid {
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;
+}
+
+.docs-main nav li {
+    font-size: 1.7rem;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+.docs-main a:hover {
+    font-weight: bold;
+}
+
+/* ANIMATIONS */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/*------------- MEDIA QUERIES -----------*/
+
+/* TABLET AND UNDER */
+@media (max-width: 768px) {
+    .grid,
+    .showcase .grid,
+    .stats .grid,
+    .cli .grid,
+    .cloud .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .features .grid,
+    .features-main .grid,
+    .features-subhead .grid,
+    .docs-header .grid,
+    .docs-main .grid {
+        display: block;
+    }
+
+    .features,
+    .features-main,
+    .features-subhead,
+    .docs-header,
+    .docs-main {
+        text-align: center;
+    }
+
+    .features-main .flex {
+        justify-content: start;
+    }
+
+    .showcase {
+        height: auto;
+    }
+
+    .showcase-text {
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .showcase-form {
+        justify-self: center;
+        margin: auto;
+    }
+
+    .cli .grid {
+        display: inline-block;
+    }
+
+    .footer .grid {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 500px) {
+    .navbar {
+        height: 11rem;
+    }
+    .navbar .flex {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        padding: 1rem;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .showcase-form {
+        width: 30rem;
+    }
+
+    .docs-header h1 {
+        font-size: 5rem;
+    }
+
+    .docs-main pre {
+        overflow: hidden;
+        /* padding: 0; */
+        font-size: 1.4rem;
+    }
+
+    .footer .grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer .social a {
+        margin: auto;
+    }
+    .footer ul {
+        display: flex;
+    }
+
+    .footer ul a {
+        padding: 0 1rem;
+    }
+}
